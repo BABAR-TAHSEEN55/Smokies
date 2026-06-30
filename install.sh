@@ -35,28 +35,28 @@ gum style --bold --foreground="#DDDD44" "Beginning Installation..."
 # Install
 for selected in "${FI_SELECTION[@]}"; do
 	case "$selected" in
-	System*) source "$FEATHERS/packages.sh" ;;
-	Auto-Login) source "$FEATHERS/autologin.sh" ;;
+	System*) source "$SMOKIES/packages.sh" ;;
+	Auto-Login) source "$SMOKIES/autologin.sh" ;;
 
-	LazyVim) source "$FEATHERS/lazyvim.sh" ;;
-	Mullvad*) source "$FEATHERS/mullvad.sh" ;;
-	Tor*) source "$FEATHERS/mullvad.sh" tor ;;
-	Vintage*) source "$FEATHERS/vintagestory.sh" ;;
-	TLP) source "$FEATHERS/tlp.sh" ;;
-	Gamemode) source "$FEATHERS/gamemode.sh" ;;
+	LazyVim) source "$SMOKIES/lazyvim.sh" ;;
+	Mullvad*) source "$SMOKIES/mullvad.sh" ;;
+	Tor*) source "$SMOKIES/mullvad.sh" tor ;;
+	Vintage*) source "$SMOKIES/vintagestory.sh" ;;
+	TLP) source "$SMOKIES/tlp.sh" ;;
+	Gamemode) source "$SMOKIES/gamemode.sh" ;;
 
-	Desktop*) source "$FEATHERS/desktops.sh" ;;
-	Wallpapers) source "$FEATHERS/wallpapers.sh" ;;
+	Desktop*) source "$SMOKIES/desktops.sh" ;;
+	Wallpapers) source "$SMOKIES/wallpapers.sh" ;;
 
-	Alacritty*) source "$FEATHERS/gnome-terminal.sh" ;;
-	Mimetypes) source "$FEATHERS/mimetypes.sh" ;;
-	Configs) source "$FEATHERS/configs.sh" ;;
-	SDDM*) source "$FEATHERS/sddm-theme.sh" ;;
+	Alacritty*) source "$SMOKIES/gnome-terminal.sh" ;;
+	Mimetypes) source "$SMOKIES/mimetypes.sh" ;;
+	Configs) source "$SMOKIES/configs.sh" ;;
+	SDDM*) source "$SMOKIES/sddm-theme.sh" ;;
 	*) echo "Unrecognised installation instruction $selected! Exiting." && exit 1 ;;
 	esac
 done
 
-source "$FEATHERS/migrations.sh" --set-done
+source "$SMOKIES/migrations.sh" --set-done
 
 gum style --bold --foreground="#55FF99" "Installation completed successfully!"
 gum style --underline "It is recommended to reboot after installation."
